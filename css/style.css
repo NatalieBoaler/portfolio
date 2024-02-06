@@ -1,0 +1,122 @@
+/*
+Colors used:
+Primary Color (Cream): #F5F1EE;
+Primary Color (Black): #000000;
+Secondary Color (Brown): #BDA595;
+Secondary Color (Blue): #1734FF;
+*/
+body {
+    background-color: #f5f1ee;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px; /* Sets the font size to 16px */
+    font-weight: 400; /* Sets the font weight to 400 */
+    line-height: 1.6; /* Sets the line-height to 1.6 * the font-size */
+    color: #000;
+}
+
+h1, h2, h3, h4 {
+    line-height: 1.4;
+}
+h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 36px;
+    font-weight: 400;
+}
+
+h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 28px;
+    font-weight: 400;
+}
+
+h3 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+h4 {
+    font-size: 1.125em;
+    font-weight: 700;
+}
+img {
+    width: 100%;
+}
+
+a {
+    color: #BDA595;
+    text-decoration: none; /* No underlining */
+}
+
+  a:visited { /* visited link */
+    color: #000000;
+  }
+
+  a:hover,
+  a:focus {
+  color: #BDA595;
+  text-decoration: underline;
+}
+
+  a:active { /* selected link */
+    color: #0e1a71;
+  }
+
+  .button {
+    display: inline-block; /* since the <a> tag is inline by default, we need to change this to inline-block, but more on this in the next exercise */
+    background-color: #BDA595;
+    color: #F5F1EE; /* needed to override the default link color */
+    font-weight: 700;
+    padding: 10px;
+    border-radius: 3px;
+    border-bottom: 1px solid ##BDA595; /* width of the border, type, color */
+    transition: 0.2s opacity;
+  }
+
+.button:visited {
+    background-color: #BDA595;
+    color: #F5F1EE;
+    text-decoration: none;
+}
+
+.button:hover {
+    background-color: #1734ff;
+    color: #F5F1EE;
+    text-decoration: none;
+}
+
+    .button:active {
+        background-color: #0e1a71;
+        color: #F5F1EE;
+        text-decoration: none;
+}
+
+    .button.contact {
+        display: inline-block; /* since the <a> tag is inline by default, we need to change this to inline-block, but more on this in the next exercise */
+        background-color: #1734ff;
+        color: #F5F1EE;
+        font-weight: 700;
+        padding: 10px;
+        border-radius: 3px;
+        border-bottom: 1px solid #1734ff; /* width of the border, type, color */
+        transition: 0.2s opacity;
+
+       .button.contact:visited {
+        background-color: transparent;
+        background-color: #1734ff;
+        color: #F5F1EE;
+        text-decoration: none;
+        }
+
+        .button.contact:hover {
+        background-color: #BDA595;
+        color: #F5F1EE;
+        text-decoration: none;
+              }
+
+        .button.contact:active {
+        background-color: #908074;
+        color: #F5F1EE;
+        text-decoration: none;
+    }
+}
