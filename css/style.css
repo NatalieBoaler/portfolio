@@ -5,11 +5,9 @@ Primary Color (Black): #000000;
 Secondary Color (Brown): #bda595;
 Secondary Color (Blue): #1734ff;
 */
-header {
-    background-color: #bda595;
-    padding: 10px;
-    margin: 0px 0px 10px 0px;
-  }
+* {
+    box-sizing: border-box;
+}
 
 body {
 background-color: #f5f1ee;
@@ -42,7 +40,7 @@ h3 {
 }
 
 h4 {
-    font-size: 1.125em;
+    font-size: 16px;
     font-weight: 700;
 }
 img {
@@ -126,3 +124,45 @@ a {
         color: #F5F1EE;
         text-decoration: none;
         }
+
+/* Layout styling */
+
+.container {
+    padding: 0 15px;
+}
+
+.row {
+    margin: 25px 0; /* 25px top and bottom, 0 left and right */
+}
+
+#work .row { padding-bottom: 25px; border-bottom: 1px solid #000000; 
+}
+
+#hero h1 {
+    text-align: center; /* Centers text */
+  }
+
+.logo {
+    max-width: 250px;
+    text-align: center;
+}
+
+header {
+    background-color: #bda595;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+nav > ul > li > a {
+    padding: 0 15px;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: #f5f1ee;
+}
+
+  nav > ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+
