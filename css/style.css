@@ -48,7 +48,7 @@ img {
 }
 
 a {
-    color: #bda595;
+    color: #1734ff;
     text-decoration: none; /* No underlining */
 }
 
@@ -58,12 +58,12 @@ a {
 
   a:hover,
   a:focus {
-  color: #BDA595;
-  text-decoration: underline;
+  color: #1734ff;
+  text-decoration: none;
 }
 
   a:active { /* selected link */
-    color: #0e1a71;
+    color: #1734ff;
   }
 
   .button {
@@ -90,10 +90,27 @@ a {
 }
 
 .button:active {
-        background-color: #0e1a71;
+        background-color: #908074;
         color: #F5F1EE;
         text-decoration: none;
 }
+
+.button {
+  display: inline-block;
+  background-color: #bda595;
+  color: white;
+  font-weight: 400;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 3px;
+  border-bottom: 2px solid #bda595;
+  transition: 0.2s opacity;
+}
+.button:hover {
+  opacity: 0.8;
+}
+
+
 
     .button.contact {
         display: inline-block; /* since the <a> tag is inline by default, we need to change this to inline-block, but more on this in the next exercise */
@@ -120,12 +137,31 @@ a {
               }
 
         .button.contact:active {
-        background-color: #908074;
+        background-color: #1734ff;
         color: #F5F1EE;
         text-decoration: none;
         }
+.button {
+  display: inline-block;
+  background-color: #ff7f50;
+  color: white;
+  font-weight: 400;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 3px;
+  border-bottom: 2px solid #994c30;
+  transition-duration: 0.2s;
+  transition-property: opacity;
+}
+.button:hover {
+  opacity: 0.8;
+}
 
 /* Layout styling */
+
+.text-align {
+text-align: center; 
+}
 
 .container {
     padding: 0 15px;
@@ -143,15 +179,59 @@ a {
     text-align: center; /* Centers text */
   }
 
+#hero h2 {
+    text-align: center; /* Centers text */
+  }
+
+#hero h4 {
+    text-align: center; /* Centers text */
+  }
+
 .logo {
     max-width: 100px;
+    display: inline-block;
+    text-align: center;
+}
+
+.animation {
+width: 100%;
+max-width: 100%;
+height: auto;
+}
+
+@keyframes color-change {
+  0% {fill: #fcffad;} 
+  50% {fill: #edc655;}
+  100% {fill: #f76414;}
+}
+
+.sun {
+  animation: 4s color-change infinite alternate linear;
+}
+
+@keyframes cloud-move {
+  from {transform: translate(0,50px);}
+  to {transform: translate(200px,50px);}
+}
+
+.cloud-front {
+  animation: 30s cloud-move infinite alternate linear;
+}
+
+@keyframes cloud-move-reverse {
+  from {transform: translate(100px, 48px);}
+  to {transform: translate(446px,48px);}
+}
+
+.cloud-back {
+  animation: 34s cloud-move-reverse infinite alternate linear;
 }
 
 header {
 background-color: #bda595;
 text-align: center;
 width: 100%;
-padding: 10px 0;
+padding: 20px 0;
 position: fixed;
 
 box-shadow: -2px 12px 37px rgba(0, 0, 0, 0.2) ;
@@ -163,31 +243,33 @@ box-shadow: -2px 12px 37px rgba(0, 0, 0, 0.2) ;
   }
   nav > ul > li {
     display: inline-block;
-    width: 100%;
+   
   }
+
   nav > ul > li > a {
     padding: 0 15px;
     text-transform: uppercase;
-    font-weight: 700;
-    color: #F5F1EE;
+    font-weight: 550;
+    text-decoration: none;
+    color: #f5f1ee;
   }
   nav > ul > li > a:visited {
     padding: 0 15px;
     text-transform: uppercase;
-    font-weight: 700;
-    color: #000000;
+    font-weight: 550;
+    color: #f5f1ee;
   }
   nav > ul > li > a:hover {
     padding: 0 15px;
     text-transform: uppercase;
-    font-weight: 700;
+    font-weight: 550;
     color: #1734ff;
   }
   nav > ul > li > a:active {
     padding: 0 15px;
     text-transform: uppercase;
-    font-weight: 700;
-    color: #F5F1EE;
+    font-weight: 550;
+    color: #1734ff;
   }
 
   #hero {
@@ -198,57 +280,155 @@ box-shadow: -2px 12px 37px rgba(0, 0, 0, 0.2) ;
   }
 
   main {
-    padding-top: 10px;
+    padding-top: 180px;
   }
 
+footer {
+  text-align: center;
+}
+
+ footer a {
+  display: inline-block;
+  margin: 10px;
+ }
+ 
+ .more-margin {
+  margin: 40px 0;
+ }
 footer a svg {
-    height: 40px;
-    display: inline-block;
+    height: 50px;
+  
     }
 
 
-  Medium devices (640px and larger)
+ /* Medium devices (640px and larger)
 ================================= */
   @media only screen and (min-width: 640px) {
+
     header {
-    text-align: unset;
+      text-align: unset;
     padding: 20px 0 13px;
     }
     
     nav {
     width: auto;
     float: right;
-    margin-top: 4px;
+    margin-top: 20px;
     }
+
+  nav > ul > li > a {
+      margin-top: 4px;
+  }
+
     body {
         font-size: 18px; 
         }
+  
+        h1 {
+          font-family: 'DM Serif Display', serif;
+          font-size: 38px;
+          font-weight: 400;
+      }
+      
+      h2 {
+          font-family: 'DM Serif Display', serif;
+          font-size: 30px;
+          font-weight: 400;
+      }
+      
+      h3 {
+          font-family: 'DM Serif Display', serif;
+          font-size: 26px;
+          font-weight: 400;
+      }
+      
+      h4 {
+          font-size: 18px;
+          font-weight: 700;
+      }
+
     #hero span {
         display: block;
         text-align: center;
           }
+
+        
     .col-md-6 {
         width: 50%;
           }
+
+
+          [class*="col-"] {
+            float: left;
+            padding: 10px;
+          }
+        
+        .row::after {
+            content: "";
+            clear: both;
+            display: table;
+          }
+          .container {
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+          }
+          
     }
 
 /* ==============================
 Large devices (1024px or larger)
 ================================= */
 @media only screen and (min-width: 1024px) {
+
+body {
+    font-size: 20px; 
+    }
+
+    h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 42px;
+      font-weight: 400;
+  }
+  
+  h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 34px;
+      font-weight: 400;
+  }
+  
+  h3 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 30px;
+      font-weight: 400;
+  }
+  
+  h4 {
+      font-size: 20px;
+      font-weight: 700;
+  }
+
+.col-lg-7 {
+width: 60%;
+}
+
+.col-lg-5 {
+width: 40%;
+}
+
+.container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.picture {
+max-width: 600px;
+}
+
 }
 /* ==============================
 X-large devices (1440px or larger)
 ================================= */
 @media only screen and (min-width: 1440px) {
 }
-[class*="col-"] {
-    float: left;
-    padding: 10px;
-  }
-
-.row::after {
-    content: "";
-    clear: both;
-    display: table;
-  }
