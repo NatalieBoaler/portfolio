@@ -70,10 +70,9 @@ a {
     display: inline-block; /* since the <a> tag is inline by default, we need to change this to inline-block, but more on this in the next exercise */
     background-color: #bda595;
     color: #F5F1EE; /* needed to override the default link color */
-    font-weight: 700;
+    font-weight: 400;
     padding: 10px;
     border-radius: 3px;
-    border-bottom: 1px solid #bda595; /* width of the border, type, color */
     transition: 0.2s opacity;
   }
 
@@ -95,17 +94,6 @@ a {
         text-decoration: none;
 }
 
-.button {
-  display: inline-block;
-  background-color: #bda595;
-  color: white;
-  font-weight: 400;
-  text-decoration: none;
-  padding: 10px;
-  border-radius: 3px;
-  border-bottom: 2px solid #bda595;
-  transition: 0.2s opacity;
-}
 .button:hover {
   opacity: 0.8;
 }
@@ -191,6 +179,11 @@ text-align: center;
     max-width: 100px;
     display: inline-block;
     text-align: center;
+}
+
+.portrait {
+max-width: 600px;
+place-items: center;
 }
 
 .animation {
@@ -422,9 +415,6 @@ width: 40%;
   margin-right: auto;
 }
 
-.picture {
-max-width: 600px;
-}
 
 }
 /* ==============================
