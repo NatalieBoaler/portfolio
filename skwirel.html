@@ -17,10 +17,12 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="https://kit.fontawesome.com/9358a1d2dc.js" crossorigin="anonymous"></script>
 </head>
 <body>
 	<header>
 			<div class="container">
+			<div class="navtoggle" id="myNavtoggle">
 			<div class="logo">
 			<img src="img/NBLogo.svg" alt="Logo">
 		    </div>
@@ -28,17 +30,19 @@
 				<ul class="navigation">
 				  <li><a href="index.html">Work</a></li>
 				  <li><a href="about.html">About</a></li>
-				  <li><a href="#contact">Contact</a></li>
+				  <li><a href="#contact" onclick="menuToggle()">Contact </a></li>
+				  <li><a href="javascript:void(0);" class="icon" onclick="menuToggle()"><i class="fas fa-bars"></i></a></li>
 				</ul>
 			  </nav>
+			  </div>
 		</div>
 	</header>
 
 	<main><!-- For the hero section -->
-	<div id="hero">
-			<div class="container">
-	</div>
-	<div>
+	 <div class="container-bg">
+			<div class="container fix-margin">
+ 
+ 
             <picture>
                 <source srcset="img/skwirel/Skwirel Part 1.jpg" media="(max-width:767px)">
                 <img src="img/skwirel/Skwirel Part 1 @x2.jpg" alt="Swkirel project">
@@ -75,8 +79,9 @@
                 <source srcset="img/skwirel/Skwirel Part 9.jpg" media="(max-width:767px)">
                 <img src="img/skwirel/Skwirel Part 9 @x2.jpg" alt="Swkirel project">
             </picture>
-     </div>
-	 </div>           
+  
+	 </div>  
+	</div>         
 </main>
 	<!-- For the footer  -->
 	<footer id="contact">
@@ -102,7 +107,8 @@
 		</div>
 	</footer>
 
-	<script src="js/scripts.js."></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+	<script src="js/scripts.js"></script>
 	
 </body>
 

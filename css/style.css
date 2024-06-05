@@ -70,7 +70,7 @@ a {
     display: inline-block; /* since the <a> tag is inline by default, we need to change this to inline-block, but more on this in the next exercise */
     background-color: #bda595;
     color: #F5F1EE; /* needed to override the default link color */
-    font-weight: 400;
+    font-weight: 700;
     padding: 10px;
     border-radius: 3px;
     transition: 0.2s opacity;
@@ -86,6 +86,7 @@ a {
     background-color: #1734ff;
     color: #F5F1EE;
     text-decoration: none;
+    opacity: 0.8;
 }
 
 .button:active {
@@ -94,12 +95,6 @@ a {
         text-decoration: none;
 }
 
-.button:hover {
-  opacity: 0.8;
-}
-
-
-
     .button.contact {
         display: inline-block; /* since the <a> tag is inline by default, we need to change this to inline-block, but more on this in the next exercise */
         background-color: #1734ff;
@@ -107,7 +102,6 @@ a {
         font-weight: 700;
         padding: 10px;
         border-radius: 3px;
-        border-bottom: 1px solid #1734ff; /* width of the border, type, color */
         transition: 0.2s opacity;
     }
 
@@ -129,21 +123,6 @@ a {
         color: #F5F1EE;
         text-decoration: none;
         }
-.button {
-  display: inline-block;
-  background-color: #ff7f50;
-  color: white;
-  font-weight: 400;
-  text-decoration: none;
-  padding: 10px;
-  border-radius: 3px;
-  border-bottom: 2px solid #994c30;
-  transition-duration: 0.2s;
-  transition-property: opacity;
-}
-.button:hover {
-  opacity: 0.8;
-}
 
 /* Layout styling */
 
@@ -151,9 +130,9 @@ a {
 text-align: center; 
 }
 
-.container {
-    padding: 0 15px;
-}
+.text-left {
+  text-align: left
+  }
 
 .row {
     margin: 25px 0; /* 25px top and bottom, 0 left and right */
@@ -167,13 +146,9 @@ text-align: center;
     text-align: center; /* Centers text */
   }
 
-#hero h2 {
-    text-align: center; /* Centers text */
-  }
-
-#hero h4 {
-    text-align: center; /* Centers text */
-  }
+  .container {
+    padding: 0 15px;
+}
 
 .logo {
     max-width: 100px;
@@ -183,13 +158,19 @@ text-align: center;
 
 .portrait {
 max-width: 600px;
-place-items: center;
+padding: 0,40px,0,0;
 }
 
 .animation {
 width: 100%;
 max-width: 100%;
 height: auto;
+}
+
+
+#about-picture {
+width: 100%;
+
 }
 
 @keyframes color-change {
@@ -222,9 +203,8 @@ height: auto;
 
 header {
 background-color: #bda595;
-text-align: center;
 width: 100%;
-padding: 20px 0;
+padding: 10px 0 4px;
 position: fixed;
 
 box-shadow: -2px 12px 37px rgba(0, 0, 0, 0.2) ;
@@ -233,10 +213,7 @@ box-shadow: -2px 12px 37px rgba(0, 0, 0, 0.2) ;
   nav > ul {
     list-style-type: none;
     padding: 0;
-  }
-  nav > ul > li {
-    display: inline-block;
-   
+    margin: 0;
   }
 
   nav > ul > li > a {
@@ -265,15 +242,45 @@ box-shadow: -2px 12px 37px rgba(0, 0, 0, 0.2) ;
     color: #1734ff;
   }
 
-  #hero {
-    background-color: #F5F1EE;
+  .navtoggle li:not(:last-child) {
+    display: none;
+  }
+
+  .navtoggle, .navtoggle.responsive {
+    position: relative;
+  }
+
+  .navtoggle li .icon {
+    position: absolute;
+    right: 0;
+    top: 2px;
+    font-size: 20px;
+    padding-right: 0;
+  }
+
+  .navtoggle.responsive nav {
+    padding: 24px 0 0;
+  }
+  .navtoggle.responsive li  {
+    display: block;
     padding: 20px 0;
+    border-top: 1px solid #f5f1ee;
+  }
+  
+  .navtoggle.responsive li:last-child  {
+    padding: 0 0 20px;
+  }
+
+  #hero {
+    background-color: #1734ff;
+    color: #f5f1ee;
+    padding: 60px 0;
     display: inline-block;
     width: 100%;
   }
 
   main {
-    padding-top: 180px;
+    padding-top: 120px;
   }
 
 footer {
@@ -288,11 +295,15 @@ footer {
  .more-margin {
   margin: 40px 0;
  }
+
 footer a svg {
     height: 50px;
   
     }
 
+.container-bg {
+ background-color: #ffffff;
+}
 
  /* Medium devices (640px and larger)
 ================================= */
@@ -301,6 +312,10 @@ footer a svg {
     header {
       text-align: unset;
     padding: 20px 0 13px;
+    }
+
+    main {
+      padding-top: 140px;
     }
     
     nav {
@@ -311,6 +326,10 @@ footer a svg {
 
   nav > ul > li > a {
       margin-top: 4px;
+  }
+
+  nav > ul {
+    margin: 1em 0;
   }
 
     body {
@@ -365,6 +384,15 @@ footer a svg {
             max-width: 1200px;
             margin-left: auto;
             margin-right: auto;
+          }
+          nav > ul > li {
+            display: inline-block;
+          }
+          .navtoggle li:not(:last-child) {
+            display: inline-block;
+          }
+          .navtoggle li:last-child {
+            display: none;
           }
           
     }

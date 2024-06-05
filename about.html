@@ -14,10 +14,12 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="https://kit.fontawesome.com/9358a1d2dc.js" crossorigin="anonymous"></script>
 </head>
 <body>
 	<header>
             <div class="container">
+            <div class="navtoggle" id="myNavtoggle">
             <div class="logo">
 			<img src="img/NBLogo.svg" alt="Logo">
             </div>
@@ -25,9 +27,11 @@
             <ul class="navigation">
 				  <li><a href="index.html">Work</a></li>
 				  <li><a href="about.html">About</a></li>
-				  <li><a href="#contact">Contact</a></li>
+				  <li><a href="#contact" onclick="menuToggle()">Contact </a></li>
+                  <li><a href="javascript:void(0);" class="icon" onclick="menuToggle()"><i class="fas fa-bars"></i></a></li>
 				</ul>
 			  </nav>
+            </div>
         </div>
 	</header>
 
@@ -37,25 +41,34 @@
  
     <div class="row">
         
-         <div>
+    
+            <div class="col-md-6"> 
             <picture>
                 <source srcset="img/About @1x.jpg" media="(max-width:767px)">
                 <img class="portrait" src="img/About @1x 2.jpg" alt="Photo of Natalie Boaler">
             </picture>
-            <h4>UI/UX Designer  I  Product Designer  I  Graphic Designer  I  Brand Designer</h4>
-        </div>
-         <div class="column col-lg-7">
-                    <h2>Hey, I’m Natalie!</h2>
+            <div class="text-align">
+            
+            </div>
+             </div>
+   
+        <div class="col-md-6"> 
+                    <div class="text-left"> 
+                    <h2>About me</h2>
                     <p>I’m a passionate, innovative and highly motivated UI/UX Designer.</p>
                     <p>I’ve had a creative hat for a while now with over 15 years of experience in design.</p>
                     <p>I’m a London based creative, swimming in a sea of inspiration which I love to take advantage of. I believe this helps me think outside the box and pushes me to be a forward thinking designer.</p>
                     <p>I’m probably running, making pots or deciding my next country to explore right now.</p>
                     <a href="files/CV.pdf" class="button" target="_blank" download>Download my CV</a> 
           </div>
-
+        </div>
    </div>
 
+  
+  
+   <div class="text-align">
                     <h2>Skills & Tools</h2>
+                </div>
      <div class="row">   
     <div class="col-md-6 col-lg-7"> 
                     <h3>Relevant Skills</h3>
@@ -117,7 +130,8 @@
 		</div>
     </footer>
 
-    <script src="js/scripts.js."></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="js/scripts.js"></script>
     
 </body>
 </html>
