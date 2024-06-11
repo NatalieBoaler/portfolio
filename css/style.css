@@ -168,7 +168,7 @@ a:active {
 }
 
 .logo {
-  max-width: 80px;
+  max-width: 50px;
   display: inline-block;
   text-align: center;
 }
@@ -317,7 +317,7 @@ nav > ul > li > a:active {
 }
 
 main {
-  padding-top: 120px;
+  padding-top: 50px;
 }
 
 footer {
@@ -353,6 +353,10 @@ footer a svg {
   header {
     text-align: unset;
     padding: 20px 0 13px;
+  }
+
+  .logo {
+    max-width: 80px;
   }
 
   main {
