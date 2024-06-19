@@ -9,6 +9,10 @@ Secondary Color (Blue): #1734ff;
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #f5f1ee;
   font-family: "Open Sans", sans-serif;
@@ -320,6 +324,7 @@ main {
   padding-top: 50px;
 }
 
+
 footer {
   text-align: center;
   padding: 20px;
@@ -330,22 +335,29 @@ footer a {
   display: inline-block;
   margin: 10px;
 }
+ 
+
 
 .more-margin {
   margin: 40px 0;
+ display: flex;
+ justify-content:center
 }
+
+
+footer a svg {
+width: 50px;
+}
+ 
+.container-bg {
+  background-color: #f5f1ee;
+}
+
 
 .right-margin {
   margin: 0px, 50px, 0px, 0px;
 }
-
-footer a svg {
-  height: 50px;
-}
-
-.container-bg {
-  background-color: #f5f1ee;
-}
+ 
 
 /* Medium devices (640px and larger)
 ================================= */
@@ -415,14 +427,32 @@ footer a svg {
 
   [class*="col-"] {
     float: left;
-    padding-right: 10px;
+   
   }
+
+  [class*="col-"]:first-child {
+ 
+    padding-right: 60px;
+padding-top: 40px;
+  }
+
+
 
   .row::after {
     content: "";
     clear: both;
     display: table;
+ 
   }
+
+  .row-flex {
+
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+  
+  }
+ 
 
   .container {
     max-width: 1200px;
@@ -474,6 +504,9 @@ Large devices (1024px or larger)
     font-weight: 700;
   }
 
+  .row {
+    margin: 30px 0;
+  }
   .col-lg-7 {
     width: 60%;
   }
